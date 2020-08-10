@@ -9,6 +9,7 @@ public class PropertiesConfig {
 
 	public String URL;
 	public String browser;
+	public String apiURL;
 
 	public Properties prop;
 
@@ -22,6 +23,7 @@ public class PropertiesConfig {
 			// web page URL
 			URL = prop.getProperty("url");
 			browser = prop.getProperty("browser");
+			apiURL = prop.getProperty("apiURL");
 
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

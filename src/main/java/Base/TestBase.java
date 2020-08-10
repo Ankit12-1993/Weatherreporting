@@ -1,6 +1,8 @@
 package Base;
 
 import com.google.common.reflect.TypeToken;
+import com.jayway.restassured.RestAssured;
+import com.jayway.restassured.specification.RequestSpecification;
 
 import config.GUILocatorsConfig;
 import config.PropertiesConfig;
@@ -69,6 +71,10 @@ public class TestBase {
 
 		driver.get(propertiesConfig.URL);
 
+	}
+
+	public static RequestSpecification request() {
+		return RestAssured.given().urlEncodingEnabled(false);
 	}
 
 }

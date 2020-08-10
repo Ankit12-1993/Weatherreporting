@@ -14,8 +14,10 @@ public class GUILocatorsConfig {
 
 	public String weatherInputSearchBox;
 	public String weathercitycheckbox;
+	public String weathercitycheckboxlabel;
 	public String weathersearchreloadbutton;
 	public String weatherClickCity;
+	public String weatherdetailtooltip;
 
 	private Properties properties;
 
@@ -35,6 +37,8 @@ public class GUILocatorsConfig {
 			weathersearchreloadbutton = properties.getProperty("weather.search.reload.button");
 			weathercitycheckbox = properties.getProperty("weather.city.checkbox");
 			weatherClickCity = properties.getProperty("weather.click.city");
+			weathercitycheckboxlabel = properties.getProperty("weather.city.checkbox.label");
+			weatherdetailtooltip = properties.getProperty("weather.detail.tooltip");
 
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

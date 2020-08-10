@@ -89,7 +89,7 @@ public class WaitUtil {
 		return webElement;
 	}
 
-	public static void sleep(long milliseconds) {
+	public void sleep(long milliseconds) {
 		try {
 			Thread.sleep(milliseconds);
 		} catch (InterruptedException e) {

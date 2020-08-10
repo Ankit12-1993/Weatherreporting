@@ -7,6 +7,7 @@
         <methods>
           <include name="configForWebpageLaunch"/>
           <include name="f"/>
+          <include name="tearDownTest"/>
         </methods>
       </class> <!-- testcases.NewTest -->
     </classes>
