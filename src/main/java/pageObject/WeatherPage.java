@@ -43,6 +43,7 @@ public class WeatherPage extends TestBase {
 			}
 
 			function.clickButton(weatherClickCity);
+			waitUtil.sleep(3000);
 		} catch (Exception e) {
 
 			e.printStackTrace();
@@ -53,6 +54,9 @@ public class WeatherPage extends TestBase {
 
 		SeleniumUtil function = new SeleniumUtil(driver);
 		WaitUtil waitUtil = new WaitUtil();
+
+		WebDriverWait wait = new WebDriverWait(driver, 20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(weatherdetailtooltip));
 
 		String toottipText = function.getTextFromPage(weatherdetailtooltip);
 		String REGEX = "Humidity: ";
@@ -71,7 +75,9 @@ public class WeatherPage extends TestBase {
 	public String getTemperatureInDegreeWeatherdetailPage(WebDriver driver) {
 
 		SeleniumUtil function = new SeleniumUtil(driver);
-		WaitUtil waitUtil = new WaitUtil();
+
+		WebDriverWait wait = new WebDriverWait(driver, 20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(weatherdetailtooltip));
 
 		String toottipText = function.getTextFromPage(weatherdetailtooltip);
 		String REGEX = "Temp in Degrees: ";
@@ -94,7 +100,6 @@ public class WeatherPage extends TestBase {
 
 		String toottipText = function.getTextFromPage(weatherdetailtooltip);
 		String REGEX = "Temp in Fahrenheit: ";
-		String REGEX1 = "\n";
 		Pattern pattern = Pattern.compile(REGEX);
 		String[] array = pattern.split(toottipText);
 		String firstString = array[1];

@@ -13,11 +13,13 @@ public class BackendServices extends TestBase {
 
 	Response response = null;
 
-	public Response openWeatherMapApi() throws Exception {
+	public Response openWeatherMapApi(String lat, String lon, String appid, String unit) throws Exception {
 
 		try {
+
 			response = request().header("Cache-Control", "no-cache").header("Content-Type", "application/json")
-					.post(propertiesConfig.apiURL);
+					.post(propertiesConfig.apiURL + "?lat=" + lat + "&lon=" + lon + "&exclude=hourly,daily&appid="
+							+ appid + "&units=" + unit + "");
 
 		} catch (JSONException e) {
 			e.printStackTrace();

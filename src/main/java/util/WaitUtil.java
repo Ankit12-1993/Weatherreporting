@@ -117,8 +117,8 @@ public class WaitUtil {
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(el));
 	}
 
-	public static void waitForPageLoad(WebDriver driver) throws InterruptedException {
-		driver.wait(2000);
+	public void waitForPageLoad(WebDriver driver) throws InterruptedException {
+		driver.wait(5000);
 	}
 
 	public static WebElement selAndJSClick(WebDriver driver, WebElement ele, int waitTime) {

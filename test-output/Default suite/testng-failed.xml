@@ -6,8 +6,9 @@
       <class name="testcases.NewTest">
         <methods>
           <include name="configForWebpageLaunch"/>
-          <include name="f"/>
+          <include name="VerifyHumidity"/>
           <include name="tearDownTest"/>
+          <include name="VerifyTemperature"/>
         </methods>
       </class> <!-- testcases.NewTest -->
     </classes>

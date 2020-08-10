@@ -40,6 +40,7 @@ public class TestBase {
 
 	public GUILocatorsConfig guiLocatorsConfig = new GUILocatorsConfig();
 	public PropertiesConfig propertiesConfig = new PropertiesConfig();
+	
 
 	public TestBase() {
 		propertiesConfig.populateConfiguration();
@@ -70,6 +71,7 @@ public class TestBase {
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 
 		driver.get(propertiesConfig.URL);
+		
 
 	}
 
