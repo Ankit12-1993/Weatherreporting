@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="CPC Postpaid Suite">
-    <parameter name="testType" value="Integration"/>
-    <parameter name="enableReporterLogging" value="true"/>
-    <test name="NewTest">
+	<parameter name="testType" value="Integration" />
+	<parameter name="enableReporterLogging" value="true" />
+	<test name="NewTest">
 
-        <groups>
-            <run>
-                <include name="WeatherreportingTestcaess"/>
-            </run>
-        </groups>
+		<groups>
+			<run>
+				<include name="WeatherreportingTestcaess" />
+			</run>
+		</groups>
 
-        <classes>
-            <class name="Testcases.NewTest" />
-        </classes>
-    </test>
+		<classes>
+			<class name="Testcases.ExecuteTest" />
+		</classes>
+	</test>
 
 </suite>

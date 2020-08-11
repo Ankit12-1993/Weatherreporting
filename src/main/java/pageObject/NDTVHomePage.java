@@ -13,9 +13,10 @@ public class NDTVHomePage extends TestBase {
 
 	public void redirectToWeatherPage(WebDriver driver) throws InterruptedException {
 		SeleniumUtil function = new SeleniumUtil(driver);
-		WaitUtil waitUtil = new WaitUtil();
-		waitUtil.waitForPageLoad(driver);
+
+		Thread.sleep(3000);
 		function.clickButton(ndtvmenu);
+		Thread.sleep(1000);
 		function.clickButton(ndtvWeatherLink);
 
 	}

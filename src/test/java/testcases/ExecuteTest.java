@@ -13,7 +13,7 @@ import pageObject.WeatherPage;
 import services.BackendServices;
 import util.RetryTest;
 
-public class NewTest extends TestBase {
+public class ExecuteTest extends TestBase {
 
 	public NDTVHomePage ndtvHomePage = new NDTVHomePage();
 	public WeatherPage weatherPage = new WeatherPage();
@@ -68,7 +68,7 @@ public class NewTest extends TestBase {
 
 	@AfterMethod(groups = { "WeatherreportingTestcaess" })
 	public void tearDownTest() throws IOException, InterruptedException {
-		// driver.quit();
+		driver.quit();
 		Thread.sleep(5000);
 		// kill.driverProcessKill();
 	}
