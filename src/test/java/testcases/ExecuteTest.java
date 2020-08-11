@@ -29,7 +29,8 @@ public class ExecuteTest extends TestBase {
 
 	public void configForWebpageLaunch() throws Exception {
 
-		instantiateDriver();
+		 instantiateDriver();
+		
 
 	}
 
@@ -50,7 +51,7 @@ public class ExecuteTest extends TestBase {
 	}
 
 	@Test(groups = { "WeatherreportingTestcaess" }, enabled = true, priority = 2, retryAnalyzer = RetryTest.class)
-	public void VerifyTemperature() throws Exception {
+	public void VerifyTemperatureInCelcius() throws Exception {
 
 		ndtvHomePage.redirectToWeatherPage(driver);
 		weatherPage.redirectToWeatherDetails(driver, cityName);

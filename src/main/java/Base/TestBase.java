@@ -12,6 +12,7 @@ import util.WebEventListener;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.Reporter;
@@ -24,6 +25,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
@@ -40,7 +42,6 @@ public class TestBase {
 
 	public GUILocatorsConfig guiLocatorsConfig = new GUILocatorsConfig();
 	public PropertiesConfig propertiesConfig = new PropertiesConfig();
-	
 
 	public TestBase() {
 		propertiesConfig.populateConfiguration();
@@ -51,10 +52,15 @@ public class TestBase {
 		String browserName = propertiesConfig.browser;
 
 		if (browserName.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "E:/pro/New folder/chromedriver.exe");
+			// System.setProperty("webdriver.chrome.driver", "E:/pro/New
+			// folder/chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver",
+					System.getProperty("user.dir") + "\\src\\test\\resources\\drivers\\chromedriver.exe");
+
 			driver = new ChromeDriver();
 		} else if (browserName.equals("FF")) {
-			System.setProperty("webdriver.gecko.driver", "E:/pro/geckodriver");
+			System.setProperty("webdriver.gecko.driver",
+					System.getProperty("user.dir") + "\\src\\test\\resources\\drivers\\geckodriver.exe");
 			driver = new FirefoxDriver();
 		}
 
@@ -71,7 +77,6 @@ public class TestBase {
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 
 		driver.get(propertiesConfig.URL);
-		
 
 	}
 

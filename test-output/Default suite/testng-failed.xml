@@ -7,7 +7,7 @@
         <methods>
           <include name="configForWebpageLaunch"/>
           <include name="VerifyHumidity"/>
-          <include name="VerifyTemperature"/>
+          <include name="VerifyTemperatureInCelcius"/>
           <include name="tearDownTest"/>
         </methods>
       </class> <!-- testcases.ExecuteTest -->
